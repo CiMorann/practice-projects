@@ -22,22 +22,23 @@
 <body>
 
   <!-- Rating state start -->
-  <article class="rating__card-container">
+  <form class="rating__card-container" action="index-js" method="get">
     <img class="icon-star" src="/images/icon-star.svg" alt="">
     <h2 class="rating__card--title">How did we do?</h2>
-    <p class="rating__card--description">Please let us know how we did with your support request. All feedback is appreciated 
-      to help us improve our offering!</p>
-      <div class="rating__card--rating-numbers">
-        <ul>
-          <li><button class="rating-numbers">1</button></li>
-          <li><button class="rating-numbers">2</button></li>
-          <li><button class="rating-numbers">3</button></li>
-          <li><button class="rating-numbers">4</button></li>
-          <li><button class="rating-numbers">5</button></li>
-        </ul>
-      </div>
-      <button class="sumbitBtn">Submit</button>
-  </article>
+    <!-- <p class="rating__card--description">Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p> -->
+      <fieldset class="rating__card--rating-numbers">
+        <legend> <p class="rating__card--description">Please let us know how we did with your support request. All feedback is appreciated 
+          to help us improve our offering!</p></legend>
+          <!-- (input[type:radio] + label)*5 -->
+          <input type="radio" name="r-number" id="rnumber"> <label class="rating-radio" for="r-number">1</label>
+          <input type="radio" name="r-number" id="rnumber"> <label class="rating-radio" for="r-number">2</label>
+          <input type="radio" name="r-number" id="rnumber"> <label class="rating-radio" for="r-number">3</label>
+          <input type="radio" name="r-number" id="rnumber"> <label class="rating-radio" for="r-number">4</label>
+          <input type="radio" name="r-number" id="rnumber"> <label class="rating-radio" for="r-number">5</label>
+      </fieldset>
+      <button type="submit" class="sumbitBtn">Submit</button>
+  </form>
 
 
   <!-- Rating state end -->
@@ -46,7 +47,7 @@
 
   <article class="thanks__card-container">
       <img class="thanks__card-img" src="/images/illustration-thank-you.svg" alt="">
-      <h3 class="thanks__card--selection">You selected  4<!--- Add rating here ---> out of 5</h3>
+      <h3 class="thanks__card--selection">You selected  X<!--- Add rating here ---> out of 5</h3>
       <h2 class="thanks__card--thanks">Thank you!</h2>
       <p class="thanks__card--description">We appreciate you taking the time to give a rating. If you ever need more support, 
         don’t hesitate to get in touch!</p>
